@@ -22,10 +22,12 @@ function playAgain() {
 function checkAns(){
     if(num == mainInput.value){
         secondP.innerHTML = `Congratulations!!! ${mainInput.value} is the correct Answer.`;
+        secondP.style.color = "green";
         playAgain();
        
     } else {
         secondP.innerHTML = "That was wrong. Try again"
+        secondP.style.color = "red";
     }
     
     mainInput.value = ""
