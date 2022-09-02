@@ -5,7 +5,7 @@ let secondP = document.querySelector('.second-p')
 
 submit.addEventListener("click", checkAns)
 
-let num = i()
+let num = i();
 
 console.log(num);
 
@@ -13,18 +13,25 @@ function i(){
     return Math.round(Math.random() * 10)
 }
 
+function playAgain() {
+    num = i();
+    console.log(num)
+}
+
 
 function checkAns(){
     if(num == mainInput.value){
-        secondP.innerHTML = `Congratulations!!! ${mainInput.value} is the correct Anwer.`
-        num = i();
-        // console.log(num);
+        secondP.innerHTML = `Congratulations!!! ${mainInput.value} is the correct Answer.`;
+        playAgain();
+       
     } else {
         secondP.innerHTML = "That was wrong. Try again"
     }
     
     mainInput.value = ""
 }
+
+
 
 
 
